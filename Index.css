@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #F9f3cc;
+    color: #333;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #bab8b8;
+}
+
+header .logo img {
+    width: 55px;
+    height: auto;
+    display: block;
+}
+
+header nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+nav a:hover{
+    color: rgb(24, 127, 187);
+    font-weight: bold;
+}
+
+header nav .btn {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background: #1e2b38;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+header nav .btn:hover{
+    background-color: #7c3aed;
+    scale:130%;
+}
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: transparent;
+    background: linear-gradient(90deg, #7c3aed, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.hero img {
+    /* position: relative;
+  display: inline-block; */
+    max-width: 60%;
+    height: auto;
+    grid-column: 2;
+    text-align: right;
+    margin-bottom: -3rem;
+    margin-left: 150px;
+}
+
+
+.products {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    padding: 1rem;
+    /* grid-template-columns: repeat(4, 1fr);  */
+    align-items: center;
+}
+
+.hero-images img[alt="3D Hand"] {
+    position: relative;
+    z-index: 1;
+}
+
+.product-card {
+    width: 130px;
+    height: 220px;
+    background: #c1bab8;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8rem;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.product-card img {
+    width: 100px;
+    height: 120px;
+    object-fit: contain;
+    /* margin-bottom: 8rem; */
+}
+
+#Text {
+    font-size: 24px;
+    color: rgb(190, 150, 99);
+    width: 10.2rem;
+    height: 50px;
+    background-color: #fff;
+    margin-left: -16px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+
+#Barcode{
+   margin-top: -80px;
+   border-radius: 40px;
+  
+}
+
+#Stone {
+    height: 150px;
+    width: 220px;
+    margin-bottom: -31%;
+    margin-left: 15%;
+    transform: rotateX(18deg);
+    z-index: 2;
+
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.product-card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.product-card span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    text-align: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    border-top: 1px solid #6c6767;
+    background-color: #F9f3cc;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: -10px;
+    margin-left: 20px;
+  
+}
+
+@media(max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 2rem;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+        grid-auto-flow: row;
+        margin-top: 0.8rem;
+    }
+
+    product img {
+        justify-content: center;
+        grid-auto-flow: row;
+        margin-top: 0.8rem;
+    }
+}
